@@ -1,0 +1,397 @@
+@font-face {
+    font-family: "Cat";
+    src: url(../extra/Catcafe-v5yM.ttf);
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes catHover {
+    0% {transform: scale(1)}
+    100% {transform: scale(1.05);}
+}
+
+@keyframes catHoverOff {
+    0% {transform: scale}
+}
+
+@keyframes catRotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg)}
+}
+
+/* set all margin and padding to 0 */
+/* add a font to all text */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cat', Arial, sans-serif;
+    text-shadow: 2px 2px 3px black;
+}
+
+/* add a gradient for the background */
+body {
+    background: linear-gradient(0deg, rgba(87,87,87,1) 14%, rgba(0,0,0,1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between; 
+}
+
+/* disallow the cat picture to stretch*/
+.headcat {
+    height: 100%;
+}
+
+.title {
+    text-decoration: none;
+}
+
+/* when hovered over, transform the text-shadow of the title to an outline */
+.title:hover h1 {
+    text-shadow: 
+    1px 1px 0 white,
+    -1px -1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white;
+    transition: text-shadow 0.5s;
+}
+
+article {
+    animation: fadeIn 1.5s;
+}
+
+/* style for the menu boxes */
+li a, .dropbtn {
+    padding: 15px 15px;
+    background-color: #3b3b3b;
+    color: red;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.5s, display 0.5s;
+}
+
+/* when hovered over, darken the box*/
+li a:hover {
+    background-color: #2b2b2b;
+    color: darkred;
+    transition: 0.5s;
+}
+
+/* the page the user is currently on, give the box a lighter gray*/
+.active {
+    background-color: #5b5b5b; 
+    transition: background-color 1s;
+}
+
+.active:hover {
+    background-color: #5b5b5b;
+    color: darkred;
+    transition: 0.5s;
+}
+
+/* when hovered over, show the content of the menu */
+nav:hover .dropdown-content {
+    display: flex;
+}
+
+nav:hover .dropbtn {
+    background-color: grey;
+}
+
+footer {
+    background-color: black;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: red;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: darkred;
+    transition: color 0.5s;
+}
+
+a img {
+    width: 200px;
+    border-radius: 10px solid white;
+    margin: 10px 0px;
+}
+
+/* when hovered over, give links as images a box-shadow*/
+a:hover img {
+    animation: catHover 1s;
+    transform: scale(1.05);
+}
+
+h1 {
+    color: red;
+    font-size: 105px;
+    text-shadow: 5px 5px 10px #5b5b5b;
+    transition: text-shadow 0.5s;
+}
+
+h2 {
+    color: orange;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: yellow;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    margin: 0px 20px;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+/* dropdown content, do not show*/
+ul {
+    background-color: #3b3b3b;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    border-radius: 20px;
+    
+}
+
+/* this box contains the activity boxes */
+.activities-box {
+    display: flex;
+    margin: 30px 0px;
+    flex-direction: column;
+}
+
+.activity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+/* first heading doesn't need a margin*/
+.first-heading {
+    margin-top: 0;
+}
+
+/* margin for text block so it doesnt overlap the bg image*/
+.text-block {
+    padding:128px 0px;
+}
+
+/* rows of cats */
+.cat-rows {
+    background-image: url("../img/Cdown.png"), url(../img/Cup.png);
+    background-repeat: repeat-x;
+    background-position: top, bottom;
+}
+
+/* styling for the form itself*/
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: orange;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* styling for the inputs */
+input {
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    border-radius: 15px;
+    transition: color 0.3s, background-color 0.3s;
+    outline: none;
+}
+
+input:focus {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    transition: all 0.3s;
+}
+
+input[type=submit] {
+    padding: 15px;
+    margin: 10px;
+    width: 50%;
+    background-color: red;
+    text-shadow: 2px 2px 1px black;
+    box-shadow: 0px 6px 2px black;
+}
+
+input:hover[type=submit] {
+    background-color: darkred;
+} 
+
+input:active[type=submit] {
+    transform: translateY(4px);
+    box-shadow: 0px 2px 2px black;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.input-file {
+    color: white;
+    background: black;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid orange;
+}
+
+.input-file:hover {
+    cursor: pointer;
+}
+
+
+textarea {
+    width: 300px;
+    outline: none;
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+textarea:focus {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    transition: all 0.3s;
+}
+
+.submission-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submission-sidebar img, .hidden {
+    display: none;
+}
+.submission-sidebar img {
+    width: 50%;
+    margin: 50px 0px;
+}
+
+.submission-sidebar img:hover {
+    animation: catRotate 1.5s linear infinite;
+}
+
+.submission-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* Phones */
+@media only screen and (max-width: 480px) {
+    /* shrink the head box at the top*/
+    .headcat {
+        height: 61px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    
+    /* change layout for activities-box */
+    .activities-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .act1 {
+        width: 100%;
+    }
+
+    .act2, .act3 {
+        width: 49%;
+        height: 450px;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    /* show dropdown menu as a row of boxes */
+    .dropdown-content, nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #2b2b2b;
+    }
+
+    /* add rounded corners to the last and first item*/
+    .first-item {
+        border-radius: 15px 0px 0px 15px ;
+    }
+
+    .last-item {
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    /* hide menu box */
+    .dropbtn {
+        display: none;
+    }
+
+    /* put activities in a row of 3 */
+    .activities-box {
+        flex-direction: row;
+    }
+
+    .activity {
+        width: 33%;
+    }
+
+    /* make image links bigger because there is more space now */
+    a img {
+        width: 300px;
+    }
+
+    .submission-box {
+        flex-direction: row;
+    }
+
+    .submission-sidebar img, .hidden {
+        display: flex;
+    }
+}
