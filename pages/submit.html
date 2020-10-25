@@ -25,42 +25,42 @@
             </ul>
         </nav>
     </header>
-    <article>
-        <div class="submission-box">
-            <div class="submission-sidebar">
-                <h2>Submission page</h2>
-                <p> You decided to submit a cat picture to my website. <br>
-                    Sadly, this doesnt do anything, its just here for looks <br>
-                    and to show off my styling skills. If you actually want to <br>
-                    contact me about this site, go to the <a href="contact.html">Contact page</a>.
-                </p>
-                <img src="../img/Cleft.png">
-                <p class="hidden"> Because the form doesn't do anything, I made this cat rotate <br>
-                    when you hover your mouse over it.</p>
-            </div>
-            <form id="submission-form">
-                <label class="first-label" for="name">Name:</label>
-                <input type="text" id="name" name="name" maxlength=25 size=25>
-                <label for="cat-name">Cat name:</label>
-                <input type="text" id="cat-name" name="cat-name" maxlength=25 size=25>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" maxlength=50 size=25>
-                <label>Image:</label>
-                <p>Select a gif, png or jpg</p>
-                <label class="input-file" for="img">
-                    <input type="file" id="img" name="img" accept=".png, .jpg, .gif">
-                    Upload file
-                </label>
-                <label for="msg">Message:</label>
-                <p>Max amount of characters: 1000</p>
-                <textarea id="msg" name="msg" rows="4" cols="100" maxlength=1000></textarea>
-                <input type="submit" value="Submit!">
-            </form>
+    <article class="submission-box">
+        <!-- The sidebar contains text about the submission and a rotating cat -->
+        <div class="submission-sidebar">
+            <h2>Submission page</h2>
+            <p> You decided to submit a cat picture to my website.
+                Sadly, this doesn't do anything, its just here for looks 
+                and to show off my styling skills. If you actually want to
+                contact me about this site, go to the <a href="contact.html">Contact page</a>.
+            </p>
+            <img src="../img/Cleft.png">
+            <!-- The hidden class is hidden on default, this paragraph is shown at desktop size -->
+            <p class="hidden"> Because the form doesn't do anything, I made this cat rotate
+                when you hover your mouse over it.</p>
         </div>
+        <!-- The web form, this doesn't do anything else than exist and take input. -->
+        <form id="submission-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" maxlength=25 size=25>
+            <label for="cat-name">Cat name:</label>
+            <input type="text" id="cat-name" name="cat-name" maxlength=25 size=25>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" maxlength=50 size=25>
+            <label>Image:</label>
+            <p>Select a gif, png or jpg</p>
+            <label class="input-file" for="img">
+                <input type="file" id="img" name="img" accept=".png, .jpg, .gif">
+                Upload file
+            </label>
+            <label for="msg">Message:</label>
+            <p>Max amount of characters: 1000</p>
+            <textarea id="msg" name="msg" rows="4" cols="100" maxlength=1000></textarea>
+            <input type="submit" value="Submit!">
+        </form>
     </article>
     <footer>
-        <p>Made by some dude called Martijn, 
-            no copyright or anything cus i'm just some dude.</p>
+        <p>Made by some dude that goes by Volt</p>
     </footer>
 </body>
 </html>
